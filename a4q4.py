@@ -33,3 +33,19 @@ def SolveMaze(m, s, g):
 m = read_maze('Maze1.txt')
 s = (0, 3)
 g = (4, 5)
+SolveMaze(m, s, g)
+print_maze(m)
+
+m = read_maze('Maze2.txt')
+s = (0, 0)
+g = (8, 9)
+
+SolveMaze(m, s, g)
+print_maze(m)
+
+m = read_maze('Maze3.txt')
+s = (3, 0)
+g = (23, 30)
+
+SolveMaze(m, s, g)
+print_maze(m)
