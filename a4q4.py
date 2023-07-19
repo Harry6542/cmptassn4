@@ -30,3 +30,6 @@ def SolveMaze(m, s, g):
         # Backtrack by removing current location from path
         m[row][col] = '0'
         return False
+m = read_maze('Maze1.txt')
+s = (0, 3)
+g = (4, 5)
