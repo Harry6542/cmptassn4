@@ -99,3 +99,8 @@ def test_replace():
     chain3 = n.Node(1, n.Node(2, n.Node(3, n.Node(1, n.Node(4)))))
     replaced_chain3 = replace(chain3, 1, 9)
     print("Replaced Chain 3:", to_string(replaced_chain3))
+
+# Run the test cases
+test_to_string()
+test_copy()
+test_replace()
