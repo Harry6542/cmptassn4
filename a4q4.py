@@ -9,3 +9,15 @@ def read_maze(file_name):
 def print_maze(maze):
     for row in maze:
         print(' '.join(row))
+def SolveMaze(m, s, g):
+    row, col = s
+
+    if s == g:
+        m[row][col] = 'P'
+        return True
+
+
+    if row < 0 or row >= len(m) or col < 0 or col >= len(m[0]) or m[row][col] != '0':
+        return False
+
+    m[row][col] = 'P'
