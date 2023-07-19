@@ -34,3 +34,18 @@ def copy(node_chain):
         new_chain_next = copy(node_chain.get_next())
         new_node_chain.set_next(new_chain_next)
         return new_node_chain
+def replace(node_chain, target, replacement):
+    """
+    Replace every occurrence of the data target in node_chain with replacement.
+    :param node_chain: The node chain
+    :param target: The target value to replace
+    :param replacement: The replacement value
+    :return: The reference to the first node in the chain
+    """
+    if node_chain is None:
+        return None
+    else:
+        if node_chain.get_data() == target:
+            node_chain.set_data(replacement)
+        replace(node_chain.get_next(), target, replacement)
+        return node_chain
